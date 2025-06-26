@@ -1,0 +1,34 @@
+<div class="consulta-container">
+    <h2>Consulta de Documentos</h2>
+
+    <form #consultaForm="ngForm" (ngSubmit)="enviarConsulta()" class="consulta-form">
+        <div class="select-wrapper">
+            <select [(ngModel)]="clienteId" name="clienteId" required>
+                <option value="" disabled selected>Selecciona un cliente</option>
+                <option *ngFor="let c of clientes" [value]="c">{{ c }}</option>
+            </select>
+        </div>
+
+        <label>
+            Pregunta:
+            <input [(ngModel)]="pregunta" name="pregunta" required minlength="3" #preguntaInput="ngModel" />
+            <div class="error" *ngIf="preguntaInput.errors?.required && preguntaInput.touched">
+                Este campo es obligatorio.
+            </div>
+            <div class="error" *ngIf="preguntaInput.errors?.minlength && preguntaInput.touched">
+                La pregunta debe tener al menos 3 caracteres.
+            </div>
+        </label>
+
+        <button type="submit" [disabled]="!consultaForm.form.valid">Consultar</button>
+    </form>
+    <div class="error" *ngIf="error">
+        ⚠️ {{ error }}
+    </div>
+
+    <div class="respuesta" *ngIf="respuesta">
+        <h3>Respuesta:</h3>
+        <p><strong>Encontrado en {{ respuesta.fuente }}:</strong></p>
+        <pre>{{ respuesta.respuesta }}</pre>
+    </div>
+</div>

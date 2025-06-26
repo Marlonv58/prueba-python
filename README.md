@@ -38,40 +38,40 @@ docker-compose up --build
 
 ## Estructura del proyecto y documentos
 
-prueba-python/
-├── backend/
-│ ├── app/
-│ │ ├── api/  
-│ │ │ └── consulta.py
-│ │ ├── core/  
-│ │ │ └── procesador.py
-│ │ ├── infrastructure/  
-│ │ │ └── lector_txt.py
-│ │ └── models/  
-│ │ └── consulta_dto.py
-│ ├── documentos/
-│ │ └── cliente1/
-│ │ └── archivo1.txt  
-│ ├── Dockerfile  
-│ ├── main.py  
-│ └── requirements.txt
-│
-├── frontend/
-│ ├── src/
-│ │ ├── app/
-│ │ │ ├── consulta/  
-│ │ │ │ ├── consulta.component.html
-│ │ │ │ ├── consulta.component.scss
-│ │ │ │ └── consulta.component.ts
-│ │ │ └── servicios/  
-│ │ │ └── consulta.service.ts
-│ │ ├── app-routing.module.ts
-│ │ ├── app.module.ts
-│ │ └── styles.scss
-│ └── Dockerfile  
-│
-├── docker-compose.yml  
-└── README.md
+prueba-python/    
+├── backend/    
+│ ├── app/    
+│ │ ├── api/      
+│ │ │ └── consulta.py    
+│ │ ├── core/      
+│ │ │ └── procesador.py    
+│ │ ├── infrastructure/      
+│ │ │ └── lector_txt.py    
+│ │ └── models/      
+│ │ └── consulta_dto.py    
+│ ├── documentos/    
+│ │ └── cliente1/    
+│ │ └── archivo1.txt      
+│ ├── Dockerfile      
+│ ├── main.py      
+│ └── requirements.txt    
+│    
+├── frontend/    
+│ ├── src/    
+│ │ ├── app/    
+│ │ │ ├── consulta/      
+│ │ │ │ ├── consulta.component.html    
+│ │ │ │ ├── consulta.component.scss    
+│ │ │ │ └── consulta.component.ts    
+│ │ │ └── servicios/      
+│ │ │ └── consulta.service.ts    
+│ │ ├── app-routing.module.ts    
+│ │ ├── app.module.ts    
+│ │ └── styles.scss    
+│ └── Dockerfile      
+│    
+├── docker-compose.yml      
+└── README.md    
 
 Cada archivo .txt puede contener múltiples frases o párrafos.
 El sistema buscará coincidencias exactas de palabras dentro de ellos.
